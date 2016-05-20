@@ -40,7 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\ProductManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Norhwind.Entities\Norhwind.Entities.csproj">
+      <Project>{FD16F520-5CD3-46CF-B565-E152DB1C1BE2}</Project>
+      <Name>Norhwind.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Northwind.Dal\Northwind.Dal.csproj">
+      <Project>{B5240DAA-E817-4A1B-A171-645CDF8AFB20}</Project>
+      <Name>Northwind.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Northwind.Interfaces\Northwind.Interfaces.csproj">
+      <Project>{4309EDA0-C55A-4FEF-ADDD-A8B5BD153B89}</Project>
+      <Name>Northwind.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
