@@ -3,36 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Norhwind.Bll.Concrete;
 using Norhwind.Entities;
+using Northwind.Dal.Concrete.EntitiyFramework;
 using Northwind.Interfaces;
 
 namespace Northwind.WcfLibrary.Concrete
 {
-    public class ProductService:IProductService
+    public class ProductService : IProductService
     {
+        private readonly ProductManager _productManager = new ProductManager(new EfProductDal());
         public List<Product> GetAll()
         {
-            throw new NotImplementedException();
+            return _productManager.GetAll();
         }
 
         public Product Get(int productId)
         {
-            throw new NotImplementedException();
+            return _productManager.Get(productId);
         }
 
         public void Add(Product product)
         {
-            throw new NotImplementedException();
+            _productManager.Add(product);
         }
 
         public void Delete(int productId)
         {
-            throw new NotImplementedException();
+            _productManager.Delete(productId);
         }
 
         public void Update(Product product)
         {
-            throw new NotImplementedException();
+            _productManager.Update(product);
         }
     }
 }

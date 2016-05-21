@@ -52,9 +52,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Norhwind.Bll\Norhwind.Bll.csproj">
+      <Project>{05A15DFB-F9AA-4BE5-9360-18D624923534}</Project>
+      <Name>Norhwind.Bll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Norhwind.Entities\Norhwind.Entities.csproj">
       <Project>{FD16F520-5CD3-46CF-B565-E152DB1C1BE2}</Project>
       <Name>Norhwind.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Northwind.Dal\Northwind.Dal.csproj">
+      <Project>{B5240DAA-E817-4A1B-A171-645CDF8AFB20}</Project>
+      <Name>Northwind.Dal</Name>
     </ProjectReference>
     <ProjectReference Include="..\Northwind.Interfaces\Northwind.Interfaces.csproj">
       <Project>{4309EDA0-C55A-4FEF-ADDD-A8B5BD153B89}</Project>
