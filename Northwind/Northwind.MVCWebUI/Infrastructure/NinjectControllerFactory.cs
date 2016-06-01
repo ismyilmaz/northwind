@@ -24,6 +24,10 @@ namespace Northwind.MVCWebUI.Infrastructure
         private void AddBllBindings()
         {
             _ninjectKernel.Bind<IProductService>().To<ProductManager>().WithConstructorArgument("productDal",new EfProductDal());
+
+            _ninjectKernel.Bind<ICategortService>()
+                .To<CategoryManager>()
+                .WithConstructorArgument("categoryDal", new EfCategoryDal());
         }
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
