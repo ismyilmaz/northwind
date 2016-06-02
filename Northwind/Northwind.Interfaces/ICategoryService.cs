@@ -9,7 +9,7 @@ using Norhwind.Entities;
 namespace Northwind.Interfaces
 {
     [ServiceContract]
-    public interface ICategortService
+    public interface ICategoryService
     {
         [OperationContract]
         List<Category> GetAll();

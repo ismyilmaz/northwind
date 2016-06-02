@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAuthenticationService.cs" />
-    <Compile Include="ICategortService.cs" />
+    <Compile Include="ICategoryService.cs" />
     <Compile Include="IProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

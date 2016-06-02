@@ -9,9 +9,9 @@ namespace Northwind.MVCWebUI.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ICategortService _categoryService;
+        private readonly ICategoryService _categoryService;
 
-        public CategoryController(ICategortService categoryService)
+        public CategoryController(ICategoryService categoryService)
         {
             _categoryService = categoryService;
         }

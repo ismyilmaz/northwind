@@ -9,7 +9,7 @@ using Northwind.Interfaces;
 
 namespace Norhwind.Bll.Concrete
 {
-    public class CategoryManager:ICategortService
+    public class CategoryManager:ICategoryService
     {
         private readonly ICategoryDal _categoryDal;
 

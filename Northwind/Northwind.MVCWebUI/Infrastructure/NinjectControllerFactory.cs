@@ -18,7 +18,8 @@ namespace Northwind.MVCWebUI.Infrastructure
         public NinjectControllerFactory()
         {
             _ninjectKernel = new StandardKernel();
-            AddBllBindings();
+            //AddBllBindings();
+            AddServiceBindings();
         }
 
         private void AddBllBindings()
@@ -29,9 +30,18 @@ namespace Northwind.MVCWebUI.Infrastructure
                 .To<AuthenticationManager>()
                 .WithConstructorArgument("authenticationDal", new EfIAuthenticationDal());
 
-            _ninjectKernel.Bind<ICategortService>()
+            _ninjectKernel.Bind<ICategoryService>()
                 .To<CategoryManager>()
                 .WithConstructorArgument("categoryDal", new EfCategoryDal());
+        }
+
+        private void AddServiceBindings()
+        {
+            _ninjectKernel.Bind<IProductService>().ToConstant(WcfProxy<IProductService>.CreateChannel());
+
+            _ninjectKernel.Bind<ICategoryService>().ToConstant(WcfProxy<ICategoryService>.CreateChannel());
+
+            _ninjectKernel.Bind<IAuthenticationService>().ToConstant(WcfProxy<IAuthenticationService>.CreateChannel());
         }
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
