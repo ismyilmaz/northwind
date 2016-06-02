@@ -1,0 +1,23 @@
+﻿@model Norhwind.Entities.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+    <div>
+        @Html.ValidationSummary()
+        @using (Html.BeginForm())
+        {
+            @Html.EditorForModel()
+            <input type="submit" value="Login"/>
+        }
+    </div>
+</body>
+</html>

@@ -25,6 +25,10 @@ namespace Northwind.MVCWebUI.Infrastructure
         {
             _ninjectKernel.Bind<IProductService>().To<ProductManager>().WithConstructorArgument("productDal",new EfProductDal());
 
+            _ninjectKernel.Bind<IAuthenticationService>()
+                .To<AuthenticationManager>()
+                .WithConstructorArgument("authenticationDal", new EfIAuthenticationDal());
+
             _ninjectKernel.Bind<ICategortService>()
                 .To<CategoryManager>()
                 .WithConstructorArgument("categoryDal", new EfCategoryDal());

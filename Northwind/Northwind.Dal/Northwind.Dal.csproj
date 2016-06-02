@@ -49,9 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAuthenticationDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IProductDal.cs" />
     <Compile Include="Concrete\EntitiyFramework\EfCategoryDal.cs" />
+    <Compile Include="Concrete\EntitiyFramework\EfIAuthenticationDal.cs" />
     <Compile Include="Concrete\EntitiyFramework\EfProductDal.cs" />
     <Compile Include="Concrete\EntitiyFramework\NorthwindContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
